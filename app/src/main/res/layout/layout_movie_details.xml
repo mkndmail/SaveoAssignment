@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="results"
+            type="com.example.movieappbms.models.Results" />
+        <variable
+            name="clickListener"
+            type="com.example.movieappbms.adapter.MovieListAdapter.BookMovieListener" />
+    </data>
+
+            <ImageView
+                android:id="@+id/imgMoviePoster"
+                setImage="@{results.posterPath}"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+</layout>

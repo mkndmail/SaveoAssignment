@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cast"
+            type="com.example.movieappbms.models.Cast" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+
+
+        <ImageView
+            android:id="@+id/img_credits"
+            setImage="@{cast.profilePath}"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txt_credit_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:text="@{cast.name}"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/img_credits"
+            app:layout_constraintStart_toStartOf="@+id/img_credits"
+            app:layout_constraintTop_toBottomOf="@+id/img_credits"
+            tools:text="Unbroken" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
